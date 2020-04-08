@@ -2,7 +2,7 @@
 # Kelompok X
 
 '''
-Anggota Kelompok
+Zachrandika Alif Syahrzea
 
 '''
 
