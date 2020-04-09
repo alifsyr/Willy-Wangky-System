@@ -2,7 +2,8 @@
 # Kelompok X
 
 '''
-Zachrandika Alif Syahreza
-
+Zachrandika Alif Syahrzea
+I Gede Govindabhakta
+Ryandito Diandaru
 '''
 
