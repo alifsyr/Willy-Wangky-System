@@ -9,7 +9,6 @@ def login():
                 
                 with open('user.csv') as user:
                         user_data = csv.reader(user, delimiter=',')
-                        line_count = 0
                         for row in user_data:
                                 if f'{row[3]}' == (uname):
                                         unameValid = True
