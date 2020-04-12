@@ -22,5 +22,3 @@ def login():
                                 return(True)
                         else:
                                 print("Ups, password salah atau kamu tidak terdaftar dalam sistem kami. Silakan coba lagi!")
-
-login()
