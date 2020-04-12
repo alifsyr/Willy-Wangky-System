@@ -1,6 +1,13 @@
 import csv
 
 def loadfile(x):
+    global user_data
+    global wahana_data
+    global tiket_data
+    global refund_data
+    global penggunaan_data
+    global pembelian_data
+    global kritiksaran_data
     if x == "user.csv":
         with open(x) as user :
             user_data = csv.reader (user, delimiter=',')
@@ -11,23 +18,23 @@ def loadfile(x):
             
     elif x == "tiket.csv":
         with open(x) as tiket :
-            tiket_data= csv.reader (tiket, delimiter=',')
+            tiket_data = csv.reader (tiket, delimiter=',')
             
     elif x == "refund.csv":
         with open(x) as refund :
-            refund_data= csv.reader (refund, delimiter=',')
+            refund_data = csv.reader (refund, delimiter=',')
                     
     elif x == "penggunaan.csv":
         with open(x) as penggunaan :
-            penggunaan_data= csv.reader (penggunaan, delimiter=',')
+            penggunaan_data = csv.reader (penggunaan, delimiter=',')
             
     elif x == "pembelian.csv":
         with open(x) as pembelian :
-            pembelian_data= csv.reader (pembelian, delimiter=',')
+            pembelian_data = csv.reader (pembelian, delimiter=',')
             
     else :
         with open(x) as kritiksaran :
-            kritiksaran_data= csv.reader (kritiksaran, delimiter=',')
+            kritiksaran_data = csv.reader (kritiksaran, delimiter=',')
             
 loadfile(input('Masukan nama File User: ')) # user.csv
 loadfile(input('Masukan nama File Daftar Wahana: ')) # wahana.csv
