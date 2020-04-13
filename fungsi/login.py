@@ -19,6 +19,6 @@ def login(x):
                                 i += 1
                 if(paswValid):
                         print("Selamat bersenang-senang, "+x[i][0])
-                        return(True)
+                        return(True) #untuk indikasi login berhasil
                 else:
                         print("Ups, password salah atau kamu tidak terdaftar dalam sistem kami. Silakan coba lagi!")
