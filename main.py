@@ -28,4 +28,4 @@ if command == "loadfile":
     print("File perusahaan Willy Wangky’s Chocolate Factory telah di-load.")
     
 #test
-#print(user_data[1][0])
+print(user_data)
