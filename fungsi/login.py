@@ -22,3 +22,4 @@ def login(x):
                         return(True) #untuk indikasi login berhasil
                 else:
                         print("Ups, password salah atau kamu tidak terdaftar dalam sistem kami. Silakan coba lagi!")
+login('user.csv')
