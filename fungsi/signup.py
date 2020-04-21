@@ -13,7 +13,7 @@ def signup(x):
             new_data[1]   = input("Masukkan tanggal lahir pemain: ")
             new_data[2]   = input("Masukkan tinggi badan pemain (cm):  ")
             new_data[3]   = input("Masukkan username pemain: ")
-            while  i < len(user_data) and not(unameAvailable):
+            while  i < panjang(user_data) and not(unameAvailable):
                         if user_data[i][3] == new_data[3]:
                             print("Username sudah digunakan, silahkan masukan username lain.")
                             new_data[3]   = input("Masukkan username pemain: ")
