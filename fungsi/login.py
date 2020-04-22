@@ -1,5 +1,5 @@
 def login(x):
-
+        global role
         paswValid = False
         
         while not(paswValid):
@@ -12,6 +12,7 @@ def login(x):
                                     if i[4] == pasw:
                                         paswValid = True
                                         nama = i[0]
+                                        role = i[5]
                     
                 if(paswValid):
                         print("Selamat bersenang-senang, "+nama)
