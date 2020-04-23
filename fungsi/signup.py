@@ -1,4 +1,5 @@
 import csv
+import modules
 
 def signup(x):
     unameAvailable = False
@@ -11,7 +12,7 @@ def signup(x):
             new_data[1]   = input("Masukkan tanggal lahir pemain: ")
             new_data[2]   = input("Masukkan tinggi badan pemain (cm):  ")
             new_data[3]   = input("Masukkan username pemain: ")
-            while  i < panjang(x) and not(unameAvailable):
+            while  i < modules.panjang(x) and not(unameAvailable):
                         if x[i][3] == new_data[3]:
                             unameAvailable = True
                             print("Username sudah digunakan, silahkan masukan username lain.")
