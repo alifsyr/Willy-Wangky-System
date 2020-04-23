@@ -7,7 +7,7 @@ def login(x):
                 pasw = input('Masukkan password: ')
                 
                 for i in x:
-                        if i[3] != 'Username':
+                        if i[6] != 'Saldo':
                                 if i[3] == uname:
                                     if i[4] == pasw:
                                         paswValid = True
