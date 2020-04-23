@@ -16,7 +16,7 @@ Ryandito Diandaru
 endprogram              = False
 
 while (not endprogram):
-    command = str(input())
+    command = str(input("$ "))
 
     if command == "loadfile":
         user_data           = loadfile.loadfile(input('Masukan nama File User: ')) # user.csv
