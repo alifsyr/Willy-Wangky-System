@@ -2,9 +2,11 @@
 MODULES.PY
 
 panjang             | 10 
-intSort             | 24
-strSort             | 47
-eOrde               | 85
+intSort             | 25
+strSort             | 48
+eOrde               | 86
+umur                | 119
+dateFormat          | 133
 '''
 
 def panjang(x):
@@ -21,6 +23,7 @@ database        : array, urutkan array ini
 column          : int, berdasarkan kolom ini
 order           : string, 'ascending' atau 'descending'
 '''
+
 def intSort(database, column, order):
     for i in range(panjang(database)):
         # Mengurutkan data berdasarkan kolom berisi integer
