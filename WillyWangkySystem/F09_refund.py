@@ -1,4 +1,3 @@
-import csv
 
 
 # type user : (Nama : string, Tinggi_Badan : string, Tanggal_Lahir : string, username : string)
@@ -6,8 +5,8 @@ import csv
 # data_pemain : user
 
 def refund():
+    import csv
     import modules
-
     id_wahana = input('Masukkan ID Wahana: ')
     tanggal = input('Masukkan tanggal refund: ')
     jumlah_refund = input('Jumlah tiket yang di refund: ')

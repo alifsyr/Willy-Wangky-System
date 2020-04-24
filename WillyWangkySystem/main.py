@@ -6,6 +6,7 @@ import F01_loadfile, F02_savefile, F03_signup, F04_login, F05_caripemain, F06_fi
 Zachrandika Alif Syahrzea
 I Gede Govindabhakta
 Ryandito Diandaru
+Nabila Farras Ammara Mumtaz
 '''
 
 # KAMUS GLOBAL
@@ -38,8 +39,8 @@ while (not endprogram):
     if command == "cari_pemain":
         print("Coming soon")
     
-    if command == "cari":
-        print("Coming soon")
+    elif command == "cari":
+        F06_filterrides.filterRides(wahana_data)
     
     if command == "beli_tiket":
         pembelian_data, tiket_data = F07_belitiket.beliTiket(pembelian_data, tiket_data, wahana_data, currentUser)
@@ -62,8 +63,8 @@ while (not endprogram):
     if command == "topup":
         F13_topup.topup(user_data)
     
-    if command == "riwayat_wahana":
-        print("Coming soon")
+    elif command == "riwayat_wahana":
+        F14_ridehistory.rideHistory(penggunaan_data)
     
     if command == "tiket_pemain":
         print("Coming soon")
@@ -71,5 +72,9 @@ while (not endprogram):
     if command == "exit":
         endprogram = True
     
-    if command == "showdata":
-        print(user_data, wahana_data, pembelian_data, penggunaan_data, tiket_data, refund_data, kritiksaran_data, tikethilang_data, sep="\n \n \n")
+    else:
+        print("HAH?")
+
+
+#test
+print(user_data)
