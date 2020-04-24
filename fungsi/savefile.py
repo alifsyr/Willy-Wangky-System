@@ -1,13 +1,6 @@
 import csv
 
-def save(x):
-    global user_data
-    global wahana_data
-    global pembelian_data
-    global penggunaan_data
-    global tiket_data
-    global refund_data
-    global kritiksaran_data
+def save(user_data, wahana_data, pembelian_data, penggunaan_data, tiket_data, refund_data, kritiksaran_data):
     succsess = False
     daftar_file=["User","Daftar Wahana","Pembelian Tiket","Penggunaan Tiket","Kepemilikan Tiket","Refund Tiket","Kritik dan Saran"]
      
@@ -51,3 +44,6 @@ def save(x):
                     
     succses = True
     return success
+
+def saveFile(namaFile, arrayData):
+    return
