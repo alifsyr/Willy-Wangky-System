@@ -1,7 +1,7 @@
-def topUp(x):
+def topUp(user_data):
     uname = input('Masukkan username: ')
     tambah = int(input('Masukkan saldo yang di-top up: '))
-    for i in x:
+    for i in (user_data):
         if i[6] != 'Saldo':
             if i[3] == uname:
                 nama = i[0]
