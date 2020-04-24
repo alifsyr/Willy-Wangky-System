@@ -1,5 +1,4 @@
 import csv
-import modules
 
 # type user : (Nama : string, Tinggi_Badan : string, Tanggal_Lahir : string, username : string)
 # data : SEQFILE of data_pemain
@@ -9,6 +8,7 @@ def EOP(x) :
 
 
 def cari_pemain():
+
     username = input('Masukkan username: ')
     data_pemain = csv.reader(open('user.csv', "rb"), delimiter=",")
     found = False

@@ -1,5 +1,6 @@
+
 def accessFeedback(feedback):
-    import modules
+    from modules import strSort
     '''
     feedback 
     0 - Username
@@ -7,8 +8,9 @@ def accessFeedback(feedback):
     2 - ID Wahana
     3 - Isi Kritik
     '''
-    feedback = modules.strSort(feedback, 2, "ascending")
+    feedback = strSort(feedback, 2, "ascending")
 
+    print("Kritik dan saran: ")
     for entry in feedback:
         id_wahana   = entry[2]
         tanggal     = entry[1]
