@@ -14,11 +14,10 @@ Ryandito Diandaru
     user_data           : array of array of string
 '''
 endprogram              = False
+currentUser = [" $NOUSER", " %NOUSER", " $NOUSER", " $NOUSER", " $NOUSER", "notLoggedIn", " $NOUSER"]
 
 while (not endprogram):
     command = str(input("$ "))
-
-    currentUser = ["", "", "", "", "", "notLoggedIn", ""]
 
     if command == "loadfile":
         user_data           = loadfile.loadfile(input('Masukkan nama File User: ')) # user.csv
@@ -35,7 +34,7 @@ while (not endprogram):
         user_data           = loadfile.loadfile(input('Masukkan nama File user: '))
 
     if command == "signup":
-        user_data = signup.signup(user_data)    
+        user_data = signup.signup(user_data, currentUser)    
     
     if command == "exit":
         endprogram = True
