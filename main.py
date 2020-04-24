@@ -6,6 +6,7 @@ from fungsi import F01_loadfile, F02_savefile, F03_signup, F04_login, F05_caripe
 Zachrandika Alif Syahrzea
 I Gede Govindabhakta
 Ryandito Diandaru
+Nabila Farras Ammara Mumtaz
 '''
 
 # KAMUS GLOBAL
@@ -39,7 +40,7 @@ while (not endprogram):
         print("Coming soon")
     
     elif command == "cari":
-        print("Coming soon")
+        F06_filterrides.filterRides(wahana_data)
     
     elif command == "beli_tiket":
         pembelian_data, tiket_data = F07_belitiket.beliTiket(pembelian_data, tiket_data, wahana_data, currentUser)
@@ -63,7 +64,7 @@ while (not endprogram):
         F13_topup.topup(user_data)
     
     elif command == "riwayat_wahana":
-        print("Coming soon")
+        F14_ridehistory.rideHistory(penggunaan_data)
     
     elif command == "tiket_pemain":
         print("Coming soon")
