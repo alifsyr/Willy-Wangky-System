@@ -1,6 +1,7 @@
-import modules
+
 
 def beliTiket(pembelian_data, tiket_data, wahana_data,currentUser):
+    import modules
     '''
     pembelian_data      : Username, Tanggal Pembelian, ID, Jumlah Tiket
     tiket_data          : Username, Tanggal Pembelian, ID, Jumlah Tiket
