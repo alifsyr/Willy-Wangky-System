@@ -18,6 +18,8 @@ endprogram              = False
 while (not endprogram):
     command = str(input("$ "))
 
+    currentUser = ["", "", "", "", "", "notLoggedIn", ""]
+
     if command == "loadfile":
         user_data           = loadfile.loadfile(input('Masukan nama File User: ')) # user.csv
         wahana_data         = loadfile.loadfile(input('Masukan nama File Daftar Wahana: ')) # wahana.csv
@@ -37,6 +39,6 @@ while (not endprogram):
     if command == "exit":
         endprogram = True
 
-    
+
 #test
 print(user_data)
