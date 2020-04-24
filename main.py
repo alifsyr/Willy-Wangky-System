@@ -1,12 +1,13 @@
 # Tugas Besar IF1210 Dasar Pemrograman
 # Kelompok X
 
-from fungsi import loadfile, login, signup
+from fungsi import loadfile, login, signup, filterrides, ridehistory
 
 '''
 Zachrandika Alif Syahrzea
 I Gede Govindabhakta
 Ryandito Diandaru
+Nabila Farras Ammara Mumtaz
 '''
 
 # KAMUS GLOBAL
@@ -33,7 +34,13 @@ while (not endprogram):
 
     if command == "signup":
         user_data = signup.signup(user_data)    
-    
+        
+    if command == "riwayat":
+        ridehistory.rideHistory(penggunaan_data)
+        
+    if command == "cari":
+        filterrides.filterRides(wahana_data)
+        
     if command == "exit":
         endprogram = True
 
