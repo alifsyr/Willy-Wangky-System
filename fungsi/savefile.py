@@ -46,4 +46,4 @@ def save(user_data, wahana_data, pembelian_data, penggunaan_data, tiket_data, re
     return success
 
 def saveFile(namaFile, arrayData):
-    return
+    datafile = open

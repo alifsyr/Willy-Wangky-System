@@ -28,6 +28,7 @@ while (not endprogram):
         tiket_data          = loadfile.loadfile(input('Masukkan nama File Kepemilikan Tiket: ')) # tiket.csv
         refund_data         = loadfile.loadfile(input('Masukkan nama File Refund Tiket: ')) # refund.csv
         kritiksaran_data    = loadfile.loadfile(input('Masukkan nama File Kritik dan Saran: ')) #kritiksaran.csv
+        tikethilang_data    = loadfile.loadfile(input('Masukkan nama File Tiket Hilang: ')) #lostticket.csv
         print("File perusahaan Willy Wangky’s Chocolate Factory telah di-load.")
         
     if command =="loadfiletest":
