@@ -21,10 +21,10 @@ while (not endprogram):
     currentUser = ["", "", "", "", "", "notLoggedIn", ""]
 
     if command == "loadfile":
-        user_data           = loadfile.loadfile(input('Masukan nama File User: ')) # user.csv
-        wahana_data         = loadfile.loadfile(input('Masukan nama File Daftar Wahana: ')) # wahana.csv
-        pembelian_data      = loadfile.loadfile(input('Masukan nama File Pembelian Tiket: ')) # pembelian.csv
-        penggunaan_data     = loadfile.loadfile(input('Masukan nama File Penggunaan Tiket: ')) # penggunaan.csv
+        user_data           = loadfile.loadfile(input('Masukkan nama File User: ')) # user.csv
+        wahana_data         = loadfile.loadfile(input('Masukkan nama File Daftar Wahana: ')) # wahana.csv
+        pembelian_data      = loadfile.loadfile(input('Masukkan nama File Pembelian Tiket: ')) # pembelian.csv
+        penggunaan_data     = loadfile.loadfile(input('Masukkan nama File Penggunaan Tiket: ')) # penggunaan.csv
         tiket_data          = loadfile.loadfile(input('Masukkan nama File Kepemilikan Tiket: ')) # tiket.csv
         refund_data         = loadfile.loadfile(input('Masukkan nama File Refund Tiket: ')) # refund.csv
         kritiksaran_data    = loadfile.loadfile(input('Masukkan nama File Kritik dan Saran: ')) #kritiksaran.csv
