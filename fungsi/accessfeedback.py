@@ -1,6 +1,5 @@
-import modules
-
 def accessFeedback(feedback):
+    import modules
     '''
     feedback 
     0 - Username

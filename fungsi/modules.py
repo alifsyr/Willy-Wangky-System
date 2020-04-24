@@ -15,8 +15,11 @@ def panjang(x):
         len  = len + 1
     return(len)  
 
-test = [[1,2], [2,3], [1,3], [4,2], [2,3]]
-testText = [("ABC", 2), ("BcA", 3), ("Aad", 1)]
+def search(data, query, column):
+    return query
+
+# test = [[1,2], [2,3], [1,3], [4,2], [2,3]]
+# testText = [("ABC", 2), ("BcA", 3), ("Aad", 1)]
 ### Sort
 '''
 database        : array, urutkan array ini

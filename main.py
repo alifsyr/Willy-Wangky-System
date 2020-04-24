@@ -1,7 +1,7 @@
 # Tugas Besar IF1210 Dasar Pemrograman
 # Kelompok X
 
-from fungsi import loadfile, login, signup, savefile, belitiket, accessfeedback, modules, topup
+from fungsi import loadfile, login, signup, savefile, belitiket, accessfeedback, topup
 '''
 Zachrandika Alif Syahrzea
 I Gede Govindabhakta

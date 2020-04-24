@@ -1,7 +1,8 @@
 import csv
-import modules
+
 
 def save(data, names):
+    import modules
     for i in range(modules.panjang(names)):
         name = str(input("Masukkan nama file ", names[i], ":", sep=""))
         saveFile(name, data[i])
