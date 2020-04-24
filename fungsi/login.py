@@ -1,12 +1,12 @@
-def login(x):
-        global role
+def login(user_data):
+        
         paswValid = False
         
         while not(paswValid):
                 uname = input('Masukkan username: ')
                 pasw = input('Masukkan password: ')
                 
-                for i in x:
+                for i in (user_data):
                         if i[6] != 'Saldo':
                                 if i[3] == uname:
                                     if i[4] == pasw:
