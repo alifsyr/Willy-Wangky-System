@@ -1,1 +1,6 @@
 ID_Wahana,Nama_Wahana,Harga_Tiket,Batasan_Umur,Batasan_Tinggi
+AFQ107,Cocoa Rain,75000,Anak-anak,Tanpa batasan
+IKR106,Almond's Charm,125000,Dewasa,Tanpa batasan
+LAB135,Recursive Cafe,135000,Dewasa,Tanpa batasan
+NVD011,Hazelnut River,50000,Semua umur,Tanpa batasan
+AHR007,Candy Crush,150000,Dewasa,>=170 cm
