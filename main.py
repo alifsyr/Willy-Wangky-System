@@ -1,7 +1,7 @@
 # Tugas Besar IF1210 Dasar Pemrograman
 # Kelompok X
 
-from fungsi import loadfile, login, signup, savefile, belitiket
+from fungsi import loadfile, login, signup, savefile, belitiket, accessfeedback
 
 '''
 Zachrandika Alif Syahrzea
@@ -52,7 +52,7 @@ while (not endprogram):
         print("Coming soon")
     
     elif command == "kritik_saran":
-        print("Coming soon") 
+        accessfeedback.accessFeedback(kritiksaran_data)
 
     elif command == "lihat_laporan":
         print("Coming soon")
