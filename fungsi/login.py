@@ -12,10 +12,10 @@ def login(user_data):
                                     if i[4] == pasw:
                                         paswValid = True
                                         nama = i[0]
-                                        role = i[5]
+                                        currentUser = i
                     
                 if(paswValid):
                         print("Selamat bersenang-senang, "+nama)
-                        return(True) #untuk indikasi login berhasil
+                        return(currentUser) #untuk indikasi login berhasil
                 else:
                         print("Ups, password salah atau kamu tidak terdaftar dalam sistem kami. Silakan coba lagi!")
