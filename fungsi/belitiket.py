@@ -1,6 +1,6 @@
 import modules
 
-def buyTicket(pembelian_data, tiket_data, wahana_data,currentUser):
+def beliTiket(pembelian_data, tiket_data, wahana_data,currentUser):
     '''
     pembelian_data      : Username, Tanggal Pembelian, ID, Jumlah Tiket
     tiket_data          : Username, Tanggal Pembelian, ID, Jumlah Tiket
@@ -22,8 +22,8 @@ def buyTicket(pembelian_data, tiket_data, wahana_data,currentUser):
     elif (int(currentUser[6] < wahana_data[idWahana][2])):
         print("Where's my fucking money")
     else:
-        newPurchase = str(currentUser[3]) +  str(tanggal) + str(idWahana) + str(jumlah)
-        return Add(newPurchase, pembelian_data), Add(newPurchase, tiket_data) 
+        newPurchase = (str(currentUser[3]),  str(tanggal), str(idWahana), str(jumlah))
+        return pembelian_data + newPurchase, tiket_data + newPurchase 
         
 # Placeholder
 def Add(x, y):

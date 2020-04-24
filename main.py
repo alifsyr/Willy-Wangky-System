@@ -1,7 +1,7 @@
 # Tugas Besar IF1210 Dasar Pemrograman
 # Kelompok X
 
-from fungsi import loadfile, login, signup
+from fungsi import loadfile, login, signup, savefile, belitiket
 
 '''
 Zachrandika Alif Syahrzea
@@ -19,25 +19,61 @@ currentUser = [" $NOUSER", " %NOUSER", " $NOUSER", " $NOUSER", " $NOUSER", "notL
 while (not endprogram):
     command = str(input("$ "))
 
-    if command == "loadfile":
-        user_data           = loadfile.loadfile(input('Masukkan nama File User: ')) # user.csv
-        wahana_data         = loadfile.loadfile(input('Masukkan nama File Daftar Wahana: ')) # wahana.csv
-        pembelian_data      = loadfile.loadfile(input('Masukkan nama File Pembelian Tiket: ')) # pembelian.csv
-        penggunaan_data     = loadfile.loadfile(input('Masukkan nama File Penggunaan Tiket: ')) # penggunaan.csv
-        tiket_data          = loadfile.loadfile(input('Masukkan nama File Kepemilikan Tiket: ')) # tiket.csv
-        refund_data         = loadfile.loadfile(input('Masukkan nama File Refund Tiket: ')) # refund.csv
-        kritiksaran_data    = loadfile.loadfile(input('Masukkan nama File Kritik dan Saran: ')) #kritiksaran.csv
-        tikethilang_data    = loadfile.loadfile(input('Masukkan nama File Tiket Hilang: ')) #lostticket.csv
-        print("File perusahaan Willy Wangky’s Chocolate Factory telah di-load.")
+    if command == "load":
+        user_data, wahana_data, pembelian_data, penggunaan_data, tiket_data, refund_data, kritiksaran_data, tikethilang_data = loadfile.load()
         
-    if command =="loadfiletest":
-        user_data           = loadfile.loadfile(input('Masukkan nama File user: '))
+    elif command == "loadfiletest":
+        user_data = loadfile.loadfile(input('Masukkan nama File user: '))
+    
+    elif command == "save":
+        data = [user_data, wahana_data, pembelian_data, penggunaan_data, tiket_data, refund_data, kritiksaran_data, tikethilang_data]
+        names = ["User", "Daftar Wahana", "Pembelian Tiket", "Penggunaan Tiket", "Kepemilikan Tiket", "Refund Tiket", "Kritik dan Saran"]
+        savefile.save(data, names)
 
-    if command == "signup":
+    elif command == "signup":
         user_data = signup.signup(user_data, currentUser)    
     
-    if command == "exit":
+    elif command == "login":
+        currentUser = login.login(user_data)
+    
+    elif command == "cari_pemain":
+        print("Coming soon")
+    
+    elif command == "cari":
+        print("Coming soon")
+    
+    elif command == "beli_tiket":
+        pembelian_data, tiket_data = belitiket.beliTiket(pembelian_data, tiket_data, wahana_data, currentUser)
+
+    elif command == "main":
+        print("Coming soon")
+    
+    elif command == "refund":
+        print("Coming soon")
+    
+    elif command == "kritik_saran":
+        print("Coming soon") 
+
+    elif command == "lihat_laporan":
+        print("Coming soon")
+    
+    elif command == "tambah_wahana":
+        print("Coming soon")
+    
+    elif command == "topup":
+        print("Coming soon")
+    
+    elif command == "riwayat_wahana":
+        print("Coming soon")
+    
+    elif command == "tiket_pemain":
+        print("Coming soon")
+
+    elif command == "exit":
         endprogram = True
+    
+    else:
+        print("HAH?")
 
 
 #test
