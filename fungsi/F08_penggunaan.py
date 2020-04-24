@@ -5,18 +5,24 @@ import modules
 # data : SEQFILE of data_pemain
 # data_pemain : user
 
-def use_ticket():
+def use_ticket(penggunaan_data, tiket_data, currentUser):
+    import modules
+    '''
+    pembelian_data : Username, Tanggal Pembelian, ID, Jumlah Tiket
+    penggunaan_data : Username, Tanggal Penggunaan, ID Wahana, Jumlah Tiket
+    currentUser : Nama, Tanggal Lahir, Tinggi, Username, Password, Role, Saldo
+    tiket_data : username, id wahana, jumlah tiket
+    '''
+    
     id_wahana =  input('Masukkan ID Wahana: ')
     tanggal = input('Masukkan tanggal hari ini: ')
     jumlah_tiket = input('Jumlah tiket yang digunakan: ')
-    found = False
-    for row in pembelian_data:
-        if id_wahana == row[2] and tanggal == row[1] :
-            if jumlah_tiket <= row[3]:
+    username = currentUser[3]
+    if id_wahana == tiket_data[username][1] and jumlah_tiket <= tiket_data[username][2] :
                 print('Terimakasih telah bermain.')
-                found = True
-            else:
-                print('Tiket Anda tidak valid dalam sistem kami')
-    if not(found):
+                newPenggunaan = (str(currentUser[3]), str(tanggal), str(id_wahana), str(jumlah_tiket))
+                newKepemilikan = (str(currentUser[3]), str(id_wahana), str(tiket_data[id_wahana][3] - jumlah_tiket))
+                return penggunaan_data + newPenggunaan, tiket_data + newKepemilikan
+    else:
         print('Tiket Anda tidak valid dalam sistem kami')
                 

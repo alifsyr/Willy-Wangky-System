@@ -142,3 +142,21 @@ def dateFormat(date):
     bulan   = int( date[3] + date[4] )
     tahun   = int( date[6] + date[7] + date[8] + date[9] )
     return (hari, bulan, tahun)
+
+def search(data, query, file, option):
+    # data : bentuk data yang dicari
+    # query : jenis data ( dalam row apa )
+    # file : nama file
+    # option : pilihan ada dua, 'boolean' atau 'print',
+    # jika memilih print maka akan menampilkan row yang dicari
+    # contoh : search("babi", username, user_data, boolean)
+    if option == 'boolean' :
+        for row in file :
+            if data == row[query] :
+                return True
+            else:
+                return False
+    elif option == 'print':
+        for row in file :
+            if data == row[query] :
+                print(row)
