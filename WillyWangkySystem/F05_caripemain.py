@@ -4,7 +4,6 @@ def cari_pemain(currentUser, user_data):
     '''
     currentUser : Nama, Tanggal Lahir, Tinggi, Username, Password, Role, Saldo
     '''
-    import module
     username = input('Masukkan username: ')
     found = False
     if (currentUser[5] == "Admin"):
