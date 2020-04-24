@@ -51,7 +51,7 @@ while (not endprogram):
         print("Coming soon")
     
     elif command == "kritik_saran":
-        accessfeedback.accessFeedback(kritiksaran_data)
+        print("Coming soon") 
 
     elif command == "lihat_laporan":
         print("Coming soon")
@@ -60,7 +60,7 @@ while (not endprogram):
         print("Coming soon")
     
     elif command == "topup":
-        print("Coming soon")
+        user_data = topup.topup(user_data)
     
     elif command == "riwayat_wahana":
         print("Coming soon")

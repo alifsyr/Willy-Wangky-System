@@ -1,4 +1,4 @@
-def topUp(user_data):
+def topup(user_data):
     uname = input('Masukkan username: ')
     tambah = int(input('Masukkan saldo yang di-top up: '))
     for i in (user_data):
