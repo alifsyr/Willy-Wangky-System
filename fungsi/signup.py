@@ -14,7 +14,7 @@ def signup(user_data, currentUser):
             new_data[1]   = input("Masukkan tanggal lahir pemain: ")
             new_data[2]   = input("Masukkan tinggi badan pemain (cm):  ")
             new_data[3]   = input("Masukkan username pemain: ")
-            while  i < modules.panjang(user_data) and not(unameAvailable):
+            while  i < (modules.panjang(user_data)) and not(unameAvailable):
                 if user_data[i][3] == new_data[3]:
                     unameAvailable = True
                     print("Username sudah digunakan, silahkan masukan username lain.")
@@ -30,3 +30,5 @@ def signup(user_data, currentUser):
             user_data = user_data + [new_data]
             return user_data
     print("Maaf anda bukan Admin !")  
+
+x = [0, 0, 0]
