@@ -1,11 +1,12 @@
-import csv
-import modules
+
 
 # type user : (Nama : string, Tinggi_Badan : string, Tanggal_Lahir : string, username : string)
 # data : SEQFILE of data_pemain
 # data_pemain : user
 
 def use_ticket():
+    import csv
+    import modules
     id_wahana =  input('Masukkan ID Wahana: ')
     tanggal = input('Masukkan tanggal hari ini: ')
     jumlah_tiket = input('Jumlah tiket yang digunakan: ')
