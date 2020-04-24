@@ -136,6 +136,6 @@ def dateFormat(date):
     dd/mm/yyyy
     '''
     hari    = int( date[0] + date[1] )
-    bulan   = int( date[2] + date[3] )
-    tahun   = int( date[5] + date[6] + date[7] + date[8] )
+    bulan   = int( date[3] + date[4] )
+    tahun   = int( date[6] + date[7] + date[8] + date[9] )
     return (hari, bulan, tahun)
