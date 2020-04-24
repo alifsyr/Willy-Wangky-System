@@ -21,7 +21,7 @@ while (not endprogram):
     if command == "load":
         user_data, wahana_data, pembelian_data, penggunaan_data, tiket_data, refund_data, kritiksaran_data, tikethilang_data = F01_loadfile.load()
         
-    elif command == "loadfiletest":
+    elif command == "autoload":
         user_data, wahana_data, pembelian_data, penggunaan_data, tiket_data, refund_data, kritiksaran_data, tikethilang_data = F01_loadfile.autoLoad()
     
     elif command == "save":
