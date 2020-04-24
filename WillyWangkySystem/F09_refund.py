@@ -1,9 +1,5 @@
+
 import csv
-
-
-# type user : (Nama : string, Tinggi_Badan : string, Tanggal_Lahir : string, username : string)
-# data : SEQFILE of data_pemain
-# data_pemain : user
 
 def refund(currentUser, tiket_data, refund_data, wahana_data):
     import modules

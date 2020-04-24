@@ -1,5 +1,3 @@
-
-
 def beliTiket(pembelian_data, tiket_data, wahana_data,currentUser):
     import modules
     '''
@@ -25,7 +23,3 @@ def beliTiket(pembelian_data, tiket_data, wahana_data,currentUser):
     else:
         newPurchase = (str(currentUser[3]),  str(tanggal), str(idWahana), str(jumlah))
         return pembelian_data + newPurchase, tiket_data + newPurchase 
-        
-# Placeholder
-def Add(x, y):
-    return

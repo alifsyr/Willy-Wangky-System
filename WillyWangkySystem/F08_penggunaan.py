@@ -1,10 +1,4 @@
 import csv
-import modules
-
-# type user : (Nama : string, Tinggi_Badan : string, Tanggal_Lahir : string, username : string)
-# data : SEQFILE of data_pemain
-# data_pemain : user
-
 def use_ticket(penggunaan_data, tiket_data, currentUser):
     import modules
     '''
@@ -13,7 +7,6 @@ def use_ticket(penggunaan_data, tiket_data, currentUser):
     currentUser : Nama, Tanggal Lahir, Tinggi, Username, Password, Role, Saldo
     tiket_data : username, id wahana, jumlah tiket
     '''
-    
     id_wahana =  input('Masukkan ID Wahana: ')
     tanggal = input('Masukkan tanggal hari ini: ')
     jumlah_tiket = input('Jumlah tiket yang digunakan: ')
@@ -25,4 +18,3 @@ def use_ticket(penggunaan_data, tiket_data, currentUser):
                 return penggunaan_data + newPenggunaan, tiket_data + newKepemilikan
     else:
         print('Tiket Anda tidak valid dalam sistem kami')
-                
