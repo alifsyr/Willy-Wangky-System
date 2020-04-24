@@ -25,6 +25,6 @@ def buyTicket(pembelian_data, tiket_data, wahana_data,currentUser):
         newPurchase = str(currentUser[3]) +  str(tanggal) + str(idWahana) + str(jumlah)
         return Add(newPurchase, pembelian_data), Add(newPurchase, tiket_data) 
         
-
+# Placeholder
 def Add(x, y):
     return

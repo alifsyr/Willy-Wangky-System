@@ -1,6 +1,8 @@
 import csv
 import modules
 
+user_data = [["0", "0", "0", "0", "0", "0", "0"], ["1", "1", "1", "1", "1", "1", "1"]]
+
 def signup(x):
     unameAvailable = False
     global user_data
