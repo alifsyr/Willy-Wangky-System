@@ -4,9 +4,9 @@ def cari_pemain(currentUser, user_data):
     '''
     currentUser : Nama, Tanggal Lahir, Tinggi, Username, Password, Role, Saldo
     '''
-    username = input('Masukkan username: ')
     found = False
     if (currentUser[5] == "Admin"):
+        username = input('Masukkan username: ')
         for row in user_data :
             if username == row[3]:
                 print("Nama Pemain: "+str(row[0]))
