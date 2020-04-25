@@ -1,4 +1,4 @@
-def beliTiket(pembelian_data, tiket_data, wahana_data,currentUser, user_data):
+def beliTiket(pembelian_data, tiket_data, wahana_data,currentUser):
     import modules
     '''
     pembelian_data      : Username, Tanggal Pembelian, ID, Jumlah Tiket
@@ -23,7 +23,10 @@ def beliTiket(pembelian_data, tiket_data, wahana_data,currentUser, user_data):
         print("Where's my fucking money")
     else:
         newPurchase = (str(currentUser[3]),  str(tanggal), str(idWahana), str(jumlah))
-        
 
-        return pembelian_data + newPurchase, tiket_data + newPurchase,  
-    return pembelian_data, tiket_data, user_data
+        #Update saldo user
+        newSaldo = currentUser[6] - wahana_data[idWahana][2]
+        currentUser[6] = newSaldo
+
+        return pembelian_data + newPurchase, tiket_data + newPurchase, currentUser
+    return pembelian_data, tiket_data, currentUser

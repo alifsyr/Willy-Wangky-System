@@ -1,7 +1,7 @@
 # Tugas Besar IF1210 Dasar Pemrograman
 # Kelompok X
 
-import F01_loadfile, F02_savefile, F03_signup, F04_login, F05_caripemain, F06_filterrides, F07_belitiket, F08_penggunaan, F09_refund, F10_givefeedback, F11_accessfeedback, F12_addride, F13_topup, F14_ridehistory, F16_exit, B04_lostticket
+import F01_loadfile, F02_savefile, F03_signup, F04_login, F05_caripemain, F06_filterrides, F07_belitiket, F08_penggunaan, F09_refund, F10_givefeedback, F11_accessfeedback, F12_addride, F13_topup, F14_ridehistory, F16_exit, B04_lostticket, modules
 '''
 Zachrandika Alif Syahrzea
 I Gede Govindabhakta
@@ -43,7 +43,8 @@ while (not endprogram):
         F06_filterrides.filterRides(wahana_data)
     
     elif command == "beli_tiket":
-        pembelian_data, tiket_data, user_data = F07_belitiket.beliTiket(pembelian_data, tiket_data, wahana_data, currentUser, user_data)
+        pembelian_data, tiket_data, currentUser = F07_belitiket.beliTiket(pembelian_data, tiket_data, wahana_data, currentUser)
+        modules.updateArray(user_data, currentUser, currentUser[3], 3)
 
     elif command == "main":
         F08_penggunaan.use_ticket(penggunaan_data, tiket_data, currentUser)
@@ -77,5 +78,11 @@ while (not endprogram):
             F02_savefile.save(data, names)
         endprogram = True
     
+    elif command == "showdata":
+        data = [user_data, wahana_data, pembelian_data, penggunaan_data, tiket_data, refund_data, kritiksaran_data, tikethilang_data]
+        for i in data:
+            print(i, end=" | ")
+            print("\n")
+
     else:
         print("HAH?")
