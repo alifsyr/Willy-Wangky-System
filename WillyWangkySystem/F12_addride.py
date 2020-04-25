@@ -1,7 +1,7 @@
 import modules
 def addRide(wahana_data,currentUser):
     if (currentUser[5] != "Admin"):
-        print("Anda tidak mendapat izin untuk mengakses fungsi ini")
+        print("Anda tidak mendapat izin untuk mengakses fungsi ini.")
     else:
         print("Masukkan informasi wahana yang ditambahkan:")
         ID_Wahana = input("Masukkan ID wahana: ")
