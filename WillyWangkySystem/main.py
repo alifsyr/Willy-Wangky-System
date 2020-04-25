@@ -55,7 +55,7 @@ while (not endprogram):
         kritiksaran_data = F10_givefeedback.giveFeedback(kritiksaran_data, currentUser)
         
     if command == "lihat_laporan":
-        F11_accessfeedback.accessFeedback(kritiksaran_data, currentUser)
+        F11_accessfeedback.accessFeedback(kritiksaran_data)
     
     if command == "tambah_wahana":
         wahana_data = F12_addride.addRide(wahana_data, currentUser)
