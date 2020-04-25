@@ -37,7 +37,7 @@ while (not endprogram):
         currentUser = F04_login.login(user_data)
     
     if command == "cari_pemain":
-        print("Coming soon")
+        F05_caripemain.cari_pemain(currentUser, user_data)
     
     elif command == "cari":
         F06_filterrides.filterRides(wahana_data)
