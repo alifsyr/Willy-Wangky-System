@@ -46,10 +46,10 @@ while (not endprogram):
         pembelian_data, tiket_data = F07_belitiket.beliTiket(pembelian_data, tiket_data, wahana_data, currentUser)
 
     if command == "main":
-        print("Coming soon")
+        F08_penggunaan.use_ticket(penggunaan_data, tiket_data, currentUser)
     
     if command == "refund":
-        print("Coming soon")
+        F09_refund.refund(currentUser, tiket_data, refund_data, wahana_data)
     
     if command == "kritik_saran":
         kritiksaran_data = F10_givefeedback.giveFeedback(kritiksaran_data, currentUser)
@@ -70,6 +70,11 @@ while (not endprogram):
         print("Coming soon")
 
     if command == "exit":
+        simmpan = F16_exit.exit()
+        if (simmpan):
+            data = [user_data, wahana_data, pembelian_data, penggunaan_data, tiket_data, refund_data, kritiksaran_data, tikethilang_data]
+            names = ["User", "Daftar Wahana", "Pembelian Tiket", "Penggunaan Tiket", "Kepemilikan Tiket", "Refund Tiket", "Kritik dan Saran"]
+            F02_savefile.save(data, names)
         endprogram = True
     
     else:
