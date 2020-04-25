@@ -52,19 +52,19 @@ while (not endprogram):
         print("Coming soon")
     
     if command == "kritik_saran":
-        F11_accessfeedback.accessFeedback(kritiksaran_data)
-
+        kritiksaran_data = F10_givefeedback.giveFeedback(kritiksaran_data, currentUser)
+        
     if command == "lihat_laporan":
-        print("Coming soon")
+        F11_accessfeedback.accessFeedback(kritiksaran_data, currentUser)
     
     if command == "tambah_wahana":
-        print("Coming soon")
+        wahana_data = F12_addride.addRide(wahana_data, currentUser)
     
     if command == "topup":
         F13_topup.topup(user_data)
     
     elif command == "riwayat_wahana":
-        F14_ridehistory.rideHistory(penggunaan_data)
+        F14_ridehistory.rideHistory(penggunaan_data, currentUser)
     
     if command == "tiket_pemain":
         print("Coming soon")
