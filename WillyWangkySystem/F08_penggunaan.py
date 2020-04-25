@@ -9,12 +9,16 @@ def use_ticket(penggunaan_data, tiket_data, currentUser):
     '''
     id_wahana =  input('Masukkan ID Wahana: ')
     tanggal = input('Masukkan tanggal hari ini: ')
-    jumlah_tiket = input('Jumlah tiket yang digunakan: ')
+    jumlah_tiket = int(input('Jumlah tiket yang digunakan: '))
     username = str(currentUser[3])
-    if id_wahana == (tiket_data[username][1]) and jumlah_tiket <= int(tiket_data[username][2]) :
+    found = False
+    for row in tiket_data:
+        if row[0] == username :
+            if id_wahana == row[1] and jumlah_tiket <= int(row[2]):
+                found = True
                 print('Terimakasih telah bermain.')
-                newPenggunaan = (str(currentUser[3]), str(tanggal), str(id_wahana), str(jumlah_tiket))
-                newKepemilikan = (str(currentUser[3]), str(id_wahana), str(tiket_data[id_wahana][3] - jumlah_tiket))
+                newPenggunaan = [str(currentUser[3]), str(tanggal), str(id_wahana), str(jumlah_tiket)]
+                newKepemilikan = [str(currentUser[3]), str(id_wahana), str(int(row[2]) - jumlah_tiket)]
                 return penggunaan_data + newPenggunaan, tiket_data + newKepemilikan
-    else:
+    if not(found) :
         print('Tiket Anda tidak valid dalam sistem kami')
