@@ -9,9 +9,9 @@ def cari_pemain(currentUser, user_data):
     if (currentUser[5] == "Admin"):
         for row in user_data :
             if username == row[3]:
-                print("Nama Pemain: "+str(user_data[0]))
-                print("Tinggi Pemain: "+str(user_data[2]))
-                print("Tanggal Lahir Pemain :"+str(user_data[1]))
+                print("Nama Pemain: "+str(row[0]))
+                print("Tinggi Pemain: "+str(row[2]))
+                print("Tanggal Lahir Pemain :"+str(row[1]))
                 found = True
         if not(found) :
             print('Pemain tidak ditemukan.')
