@@ -1,4 +1,4 @@
-def rideHistory(penggunaan_data):
+def rideHistory(penggunaan_data, currentUser):
     if (currentUser[5] != "Admin"):
         print("Anda tidak mendapat izin untuk mengakses fungsi ini.")
     else:
