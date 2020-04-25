@@ -43,7 +43,8 @@ while (not endprogram):
         F06_filterrides.filterRides(wahana_data)
     
     if command == "beli_tiket":
-        pembelian_data, tiket_data = F07_belitiket.beliTiket(pembelian_data, tiket_data, wahana_data, currentUser)
+        # pembelian_data, tiket_data = F07_belitiket.beliTiket(pembelian_data, tiket_data, wahana_data, currentUser)
+        F07_belitiket.beliTiket(pembelian_data, tiket_data, wahana_data, currentUser)
 
     if command == "main":
         F08_penggunaan.use_ticket(penggunaan_data, tiket_data, currentUser)
@@ -77,9 +78,5 @@ while (not endprogram):
             F02_savefile.save(data, names)
         endprogram = True
     
-    else:
-        print("HAH?")
-
-
-#test
-print(user_data)
+    # else:
+    #     print("HAH?")

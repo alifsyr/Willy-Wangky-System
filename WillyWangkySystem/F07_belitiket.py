@@ -12,9 +12,10 @@ def beliTiket(pembelian_data, tiket_data, wahana_data,currentUser):
     tanggal = str(input("Masukkan tanggal hari ini: "))
     jumlah = int(input("Jumlah tiket yang dibeli: "))
 
-
-    # Validasi User
-    if (modules.umur(tanggal,currentUser[1]) < wahana_data[idWahana][3]):
+    # Validasi User and input
+    if (not modules.search(idWahana, 0, wahana_data, "boolean")):
+        print("No ride like that homie")
+    elif (modules.umur(tanggal,currentUser[1]) < wahana_data[idWahana][3]):
         print("Too fucking young")
     elif (int(currentUser[2]) < wahana_data[idWahana][4]):
         print("Too fucking short")
@@ -23,3 +24,4 @@ def beliTiket(pembelian_data, tiket_data, wahana_data,currentUser):
     else:
         newPurchase = (str(currentUser[3]),  str(tanggal), str(idWahana), str(jumlah))
         return pembelian_data + newPurchase, tiket_data + newPurchase 
+    return pembelian_data, tiket_data

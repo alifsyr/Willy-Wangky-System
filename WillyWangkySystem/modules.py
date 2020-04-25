@@ -141,7 +141,7 @@ def dateFormat(date):
     return (hari, bulan, tahun)
 
 def search(data, query, file, option):
-    # data : bentuk data yang dicari
+    # data : data yang dicari
     # query : jenis data ( dalam row apa )
     # file : nama file
     # option : pilihan ada dua, 'boolean' atau 'print',
