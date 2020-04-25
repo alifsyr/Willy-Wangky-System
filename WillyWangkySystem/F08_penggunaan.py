@@ -1,4 +1,4 @@
-import csv
+
 def use_ticket(penggunaan_data, tiket_data, currentUser):
     import modules
     '''
@@ -10,8 +10,8 @@ def use_ticket(penggunaan_data, tiket_data, currentUser):
     id_wahana =  input('Masukkan ID Wahana: ')
     tanggal = input('Masukkan tanggal hari ini: ')
     jumlah_tiket = input('Jumlah tiket yang digunakan: ')
-    username = currentUser[3]
-    if id_wahana == tiket_data[username][1] and jumlah_tiket <= tiket_data[username][2] :
+    username = str(currentUser[3])
+    if id_wahana == (tiket_data[username][1]) and jumlah_tiket <= int(tiket_data[username][2]) :
                 print('Terimakasih telah bermain.')
                 newPenggunaan = (str(currentUser[3]), str(tanggal), str(id_wahana), str(jumlah_tiket))
                 newKepemilikan = (str(currentUser[3]), str(id_wahana), str(tiket_data[id_wahana][3] - jumlah_tiket))
