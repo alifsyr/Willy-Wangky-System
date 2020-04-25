@@ -43,8 +43,7 @@ while (not endprogram):
         F06_filterrides.filterRides(wahana_data)
     
     elif command == "beli_tiket":
-        # pembelian_data, tiket_data = F07_belitiket.beliTiket(pembelian_data, tiket_data, wahana_data, currentUser)
-        F07_belitiket.beliTiket(pembelian_data, tiket_data, wahana_data, currentUser)
+        pembelian_data, tiket_data, user_data = F07_belitiket.beliTiket(pembelian_data, tiket_data, wahana_data, currentUser, user_data)
 
     elif command == "main":
         F08_penggunaan.use_ticket(penggunaan_data, tiket_data, currentUser)
