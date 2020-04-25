@@ -84,7 +84,6 @@ def stringOrder(stringA, stringB):
             return eOrde(stringA[i]) < eOrde(stringB[i])
     return lenA < lenB
 
-
 def eOrde(char):
     '''
     ASCII for integer       : 48-57
@@ -157,3 +156,25 @@ def search(data, query, file, option):
         for row in file :
             if data == row[query] :
                 print(row)
+
+def updateArrayElement(file, new_value, searchQuery, queryIndex, fileUpdateIndex):
+    #file : nama array yang ingin diubah
+    #new_value : nilai baru yang ingin diupdate
+    #who : datanya
+    #who index : data 'who' itu indeksnya keberapa
+    #what_index : data 'what' itu indeks keberapa
+    for i in file:
+        if i[queryIndex] == searchQuery:
+            i[fileUpdateIndex] = new_value
+            return file
+
+def updateArray(file, new_value, searchQuery, queryIndex):
+    #file : nama array yang ingin diubah
+    #new_value : nilai baru yang ingin diupdate
+    #who : datanya
+    #who index : data 'who' itu indeksnya keberapa
+    #what_index : data 'what' itu indeks keberapa
+    for i in file:
+        if i[queryIndex] == searchQuery:
+            i = new_value
+            return file
