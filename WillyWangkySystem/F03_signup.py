@@ -20,11 +20,11 @@ def signup(user_data, currentUser):
                     i += 1      
                     
         new_data[4]   = input("Masukkan password pemain: ")
-        new_data[5]   = ("pemain")
+        new_data[5]   = ("Pemain")
         new_data[6]   = ("0")
         print("Selamat menjadi pemain,",new_data[0],". Selamat bermain.")
         user_data = user_data + [new_data]
-        print(user_data)
+        
     else:
         print("Maaf anda bukan Admin !")  
 
