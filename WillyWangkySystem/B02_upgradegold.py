@@ -1,13 +1,13 @@
 import csv
 
 def upgrade_gold(user_data):    
-    change_acc = input("Masukkan username yang ingin di-upgrade: ")
-    for i in (user_data) :
-        if i[3] == change_acc:
-            if i[6] != "Saldo":
-                if int(i[6]) >= 100000:
+    change_acc = input("Masukkan username yang ingin di-upgrade: ")     # Memberikan input username pemain
+    for i in (user_data) :      # Melakukan looping pada matrix user_data
+        if i[3] == change_acc:      # jika username tersedia
+            if i[6] != "Saldo":       # Untuk memisahkan nama kolom dengan data
+                if int(i[6]) >= 100000:     # Jika saldo lebih atau sama dengan 100.000   
                     int(i[6]) - 100000
-                    i[5] = ("Gold")
+                    i[5] = ("Gold")     # Role diubah menjadi Gold
                     print("Akun Anda telah diupgrade.")
                 else:
                     print("Maaf saldo anda tidak cukup.")
