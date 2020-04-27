@@ -8,25 +8,31 @@ def beliTiket(pembelian_data, tiket_data, wahana_data,currentUser):
     '''
 
     # Input 
-    idWahana = int(input("Masukkan ID wahana: "))
+    inputIdWahana = str(input("Masukkan ID wahana: "))
     tanggal = str(input("Masukkan tanggal hari ini: "))
     jumlah = int(input("Jumlah tiket yang dibeli: "))
 
+    idWahana = modules.search(inputIdWahana, 0, wahana_data, "index")
+
     # Validasi User and input
-    if (not modules.search(idWahana, 0, wahana_data, "boolean")):
+    if (modules.search(idWahana, 0, wahana_data, "boolean")):
         print("No ride like that homie")
-    elif (modules.umur(tanggal,currentUser[1]) < wahana_data[idWahana][3]):
+    elif (modules.umur(tanggal,currentUser[1]) < int(wahana_data[idWahana][3])):
         print("Too fucking young")
-    elif (int(currentUser[2]) < wahana_data[idWahana][4]):
+    elif (int(currentUser[2]) < int(wahana_data[idWahana][4])):
         print("Too fucking short")
-    elif (int(currentUser[6] < wahana_data[idWahana][2])):
+    elif (int(currentUser[6]) < int(wahana_data[idWahana][2])):
         print("Where's my fucking money")
     else:
-        newPurchase = (str(currentUser[3]),  str(tanggal), str(idWahana), str(jumlah))
+        newPurchase = [str(currentUser[3]),  str(tanggal), str(idWahana), str(jumlah)]
 
         #Update saldo user
-        newSaldo = currentUser[6] - wahana_data[idWahana][2]
+        newSaldo = int(currentUser[6]) - int(wahana_data[idWahana][2])
+
         currentUser[6] = newSaldo
 
-        return pembelian_data + newPurchase, tiket_data + newPurchase, currentUser
+        dataPembelianBaru = pembelian_data + newPurchase
+        dataTiketBaru = tiket_data + newPurchase
+
+        return dataPembelianBaru, dataTiketBaru, currentUser
     return pembelian_data, tiket_data, currentUser

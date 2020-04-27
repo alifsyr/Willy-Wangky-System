@@ -85,7 +85,7 @@ while (not endprogram):
                     F02_savefile.save(data, names)
                 endprogram = True
     
-            elif command == "showdata":
+            elif command == "showdata" and currentUser[5] == "Admin" :
                 data = [user_data, wahana_data, pembelian_data, penggunaan_data, tiket_data, refund_data, kritiksaran_data, tikethilang_data]
                 for i in data:
                     print(i, end=" | ")
