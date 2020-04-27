@@ -36,7 +36,7 @@ while (not endprogram):
         else:
             if command == "save":
                 data = [user_data, wahana_data, pembelian_data, penggunaan_data, tiket_data, refund_data, kritiksaran_data, tikethilang_data]
-                names = ["User", "Daftar Wahana", "Pembelian Tiket", "Penggunaan Tiket", "Kepemilikan Tiket", "Refund Tiket", "Kritik dan Saran"]
+                names = ["User", "Daftar Wahana", "Pembelian Tiket", "Penggunaan Tiket", "Kepemilikan Tiket", "Refund Tiket", "Kritik dan Saran", "Tiket Hilang"]
                 F02_savefile.save(data, names)
 
             elif command == "signup":
@@ -80,7 +80,7 @@ while (not endprogram):
                 simmpan = F16_exit.exit()
                 if (simmpan):
                     data = [user_data, wahana_data, pembelian_data, penggunaan_data, tiket_data, refund_data, kritiksaran_data, tikethilang_data]
-                    names = ["User", "Daftar Wahana", "Pembelian Tiket", "Penggunaan Tiket", "Kepemilikan Tiket", "Refund Tiket", "Kritik dan Saran"]
+                    names = ["User", "Daftar Wahana", "Pembelian Tiket", "Penggunaan Tiket", "Kepemilikan Tiket", "Refund Tiket", "Kritik dan Saran", "Tiket Hilang"]
                     F02_savefile.save(data, names)
                 endprogram = True
     
