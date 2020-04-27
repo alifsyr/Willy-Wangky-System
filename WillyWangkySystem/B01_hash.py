@@ -1,5 +1,4 @@
-# Uses PBKDF2 Hash. Requires passlib
-# Install with pip install passlib
+# PBKDF2 HASH memakai hashlib
 
 import hashlib, binascii, os # Digunakan untuk generate angka random
 
