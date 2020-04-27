@@ -1,7 +1,7 @@
 # Tugas Besar IF1210 Dasar Pemrograman
 # Kelompok X
 
-import F01_loadfile, F02_savefile, F03_signup, F04_login, F05_caripemain, F06_filterrides, F07_belitiket, F08_penggunaan, F09_refund, F10_givefeedback, F11_accessfeedback, F12_addride, F13_topup, F14_ridehistory, F15_ticketcount, F16_exit, B04_lostticket, modules
+import F01_loadfile, F02_savefile, F03_signup, F04_login, F05_caripemain, F06_filterrides, F07_belitiket, F08_penggunaan, F09_refund, F10_givefeedback, F11_accessfeedback, F12_addride, F13_topup, F14_ridehistory, F15_ticketcount, F16_exit, B04_lostticket, B02_upgradegold, modules
 '''
 Zachrandika Alif Syahrzea
 I Gede Govindabhakta
@@ -90,6 +90,10 @@ while (not endprogram):
                 for i in data:
                     print(i, end=" | ")
                     print("\n")
+            
+            elif command == "upgrade_gold":
+                user_data = B02_upgradegold.upgradegold(user_data)
+
 
             else:
                 print("Command tidak dikenali, gunakan \"help\" untuk bantuan")
