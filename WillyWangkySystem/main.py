@@ -94,6 +94,5 @@ while (not endprogram):
             elif command == "upgrade_gold":
                 user_data = B02_upgradegold.upgradegold(user_data, currentUser)
 
-
             else:
                 print("Command tidak dikenali, gunakan \"help\" untuk bantuan")
