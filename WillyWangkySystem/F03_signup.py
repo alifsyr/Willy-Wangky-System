@@ -23,7 +23,7 @@ def signup(user_data, currentUser):
         new_data[6]   = ("0")
         print("Selamat menjadi pemain,",new_data[0],". Selamat bermain.")
         user_data = user_data + [new_data]      # array new_data ditambahkan kedalam array user_data
-        
+        return user_data
     else:
         print("Maaf anda bukan Admin !")  
 
