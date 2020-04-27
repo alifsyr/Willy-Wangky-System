@@ -21,7 +21,7 @@ def autoLoad():
     tiket_data          = loadfile("data/tiket.csv")        # user memberikan input nama file tiket.csv
     refund_data         = loadfile("data/refund.csv")       # user memberikan input nama file refund.csv
     kritiksaran_data    = loadfile("data/kritiksaran.csv")  # user memberikan input nama filekritiksaran.csv
-    tikethilang_data    = loadfile("data/lostticket.csv")   # user memberikan input nama file lostticket.csv
+    tikethilang_data    = loadfile("data/tikethilang.csv")   # user memberikan input nama file lostticket.csv
     print("File perusahaan Willy Wangky’s Chocolate Factory telah di-load secara automatis.")
 
     return user_data, wahana_data, pembelian_data, penggunaan_data, tiket_data, refund_data, kritiksaran_data, tikethilang_data
