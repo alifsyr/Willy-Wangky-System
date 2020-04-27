@@ -92,7 +92,7 @@ while (not endprogram):
                     print("\n")
             
             elif command == "upgrade_gold":
-                user_data = B02_upgradegold.upgradegold(user_data)
+                user_data = B02_upgradegold.upgradegold(user_data, currentUser)
 
 
             else:
