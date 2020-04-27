@@ -18,7 +18,7 @@ def showTicket(tiket_data, currentUser, wahana_data):
     print("Riwayat: ")
 
     if modules.panjang(userTickets) != 0:
-        selected = userTickets[1]
+        selected = userTickets[0]
         currentCount = 0
     else:
         print()
@@ -28,8 +28,13 @@ def showTicket(tiket_data, currentUser, wahana_data):
         if tiket[2] == selected[2]:
             currentCount += int(tiket[3])
         else:
-            rideIndex = modules.search(tiket[2], 0, wahana_data, 'index')
+            rideIndex = modules.search(selected[2], 0, wahana_data, 'index')
             rideName = wahana_data[rideIndex][1]
-            print(tiket[2], rideName, currentCount, sep=" | ")
+            print(selected[2], rideName, currentCount, sep=" | ")
+            lastcount = currentCount
             currentCount = 0
             selected = tiket
+    
+    rideIndex = modules.search(selected[2], 0, wahana_data, 'index')
+    rideName = wahana_data[rideIndex][1]
+    print(tiket[2], rideName, lastcount, sep=" | ")
