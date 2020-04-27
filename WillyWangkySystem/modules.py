@@ -10,10 +10,9 @@ dateFormat          | 133
 '''
 
 def panjang(x):
-    len = 0
     for i in x:
-        len  = len + 1
-    return(len)  
+        i = i
+    return(i)  
     
 # test = [[1,2], [2,3], [1,3], [4,2], [2,3]]
 # testText = [("ABC", 2), ("BcA", 3), ("Aad", 1)]
@@ -127,7 +126,7 @@ def umur(today, born):
     elif (sekarang[1] == lahir[1] and sekarang[0] >= lahir[0]):
         umur += 1
 
-    return umur
+    return int(umur)
 
 def dateFormat(date):
     '''
@@ -156,6 +155,11 @@ def search(data, query, file, option):
         for row in file :
             if data == row[query] :
                 print(row)
+    elif option == 'index':
+        for i in range(panjang(file)):
+            print(i, data, file[i])
+            if data == file[i][query]:
+                return i
 
 def updateArrayElement(file, new_value, searchQuery, queryIndex, fileUpdateIndex):
     #file : nama array yang ingin diubah
