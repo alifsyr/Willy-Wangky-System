@@ -112,7 +112,7 @@ while (not endprogram):
                 B03_wahanaterbaik.showBestWahana(pembelian_data, wahana_data)
 
             elif command == "tiket_hilang":
-                B04_lostticket.lostticket(tiket_data)   
+                B04_lostticket.lostTicket(tiket_data)   
 
             else:
                 print("Command tidak dikenali, gunakan \"help\" untuk bantuan")
