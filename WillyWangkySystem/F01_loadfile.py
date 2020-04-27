@@ -1,14 +1,17 @@
 import csv
 
 def load():
-    user_data           = loadfile(input('Masukkan nama File User: '))              # user memberikan input nama file user.csv
-    wahana_data         = loadfile(input('Masukkan nama File Daftar Wahana: '))     # user memberikan input nama file wahana.csv
-    pembelian_data      = loadfile(input('Masukkan nama File Pembelian Tiket: '))   # user memberikan input nama file pembelian.csv
-    penggunaan_data     = loadfile(input('Masukkan nama File Penggunaan Tiket: '))  # user memberikan input nama file penggunaan.csv
-    tiket_data          = loadfile(input('Masukkan nama File Kepemilikan Tiket: ')) # user memberikan input nama file tiket.csv
-    refund_data         = loadfile(input('Masukkan nama File Refund Tiket: '))      # user memberikan input nama file refund.csv
-    kritiksaran_data    = loadfile(input('Masukkan nama File Kritik dan Saran: '))  # user memberikan input nama file kritiksaran.csv
-    tikethilang_data    = loadfile(input('Masukkan nama File Tiket Hilang: '))      # user memberikan input nama file tikethilang.csv
+
+    folderDirectory = "data/"
+
+    user_data           = loadfile(folderDirectory + input('Masukkan nama File User: '))              # user memberikan input nama file user.csv
+    wahana_data         = loadfile(folderDirectory + input('Masukkan nama File Daftar Wahana: '))     # user memberikan input nama file wahana.csv
+    pembelian_data      = loadfile(folderDirectory + input('Masukkan nama File Pembelian Tiket: '))   # user memberikan input nama file pembelian.csv
+    penggunaan_data     = loadfile(folderDirectory + input('Masukkan nama File Penggunaan Tiket: '))  # user memberikan input nama file penggunaan.csv
+    tiket_data          = loadfile(folderDirectory + input('Masukkan nama File Kepemilikan Tiket: ')) # user memberikan input nama file tiket.csv
+    refund_data         = loadfile(folderDirectory + input('Masukkan nama File Refund Tiket: '))      # user memberikan input nama file refund.csv
+    kritiksaran_data    = loadfile(folderDirectory + input('Masukkan nama File Kritik dan Saran: '))  # user memberikan input nama file kritiksaran.csv
+    tikethilang_data    = loadfile(folderDirectory + input('Masukkan nama File Tiket Hilang: '))      # user memberikan input nama file tikethilang.csv
     print("File perusahaan Willy Wangky’s Chocolate Factory telah di-load.")        
 
     return user_data, wahana_data, pembelian_data, penggunaan_data, tiket_data, refund_data, kritiksaran_data, tikethilang_data

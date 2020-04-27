@@ -41,8 +41,7 @@ while (not endprogram):
                 F02_savefile.save(data, names)
 
             elif command == "signup":
-                user_data
-                F03_signup.signup(user_data, currentUser)    
+                user_data = F03_signup.signup(user_data, currentUser)    
     
             elif command == "cari_pemain":
                 F05_caripemain.cari_pemain(currentUser, user_data)
