@@ -7,6 +7,7 @@ Zachrandika Alif Syahrzea
 I Gede Govindabhakta
 Ryandito Diandaru
 Nabila Farras Ammara Mumtaz
+Alvin Rizqi Alfisyahrin
 '''
 
 # KAMUS GLOBAL
