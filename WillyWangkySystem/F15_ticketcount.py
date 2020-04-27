@@ -7,13 +7,12 @@ def showTicket(tiket_data, currentUser, wahana_data):
 
     import modules
 
-    userTickets = [tiket_data[0]]
+    userTickets = []
     
     for row in tiket_data:
         if row[0] == currentUser[3]:
             userTickets = modules.addToArray(userTickets, row)
-
-    print(userTickets)
+            
     userTickets = modules.strSort(userTickets, 2, "ascending")
 
     print("Riwayat: ")
@@ -31,6 +30,6 @@ def showTicket(tiket_data, currentUser, wahana_data):
         else:
             rideIndex = modules.search(tiket[2], 0, wahana_data, 'index')
             rideName = wahana_data[rideIndex][1]
-            print(tiket[2], rideName, currentCount)
+            print(tiket[2], rideName, currentCount, sep=" | ")
             currentCount = 0
             selected = tiket
