@@ -29,7 +29,7 @@ Alvin Rizqi Alfisyahrin
 
 '''
 endprogram              = False
-currentUser = [" $NOUSER", " %NOUSER", " $NOUSER", " $NOUSER", " $NOUSER", "notLoggedIn", " $NOUSER"]
+currentUser = [" $NOUSER", " %NOUSER", " $NOUSER", " $NOUSER", " $NOUSER", " $NOUSER", " $NOUSER"]
 
 while (not endprogram):
     command = str(input("$ "))

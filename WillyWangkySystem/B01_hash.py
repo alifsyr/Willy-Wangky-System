@@ -31,5 +31,3 @@ def verifyPassword(password, inputPass):
     hashedInput = binascii.hexlify(hashedInput).decode('ascii') 
 
     return password == hashedInput
-
-

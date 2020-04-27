@@ -1,4 +1,6 @@
 def login(user_data):
+        import B01_hash
+        
         #inisialisasi belum berhasil
         paswValid = False
 
@@ -13,7 +15,8 @@ def login(user_data):
         for i in (user_data):
                 if i[6] != 'Saldo':
                         if i[3] == uname:
-                                if i[4] == pasw:
+                                # if i[4] == pasw:
+                                if B01_hash.verifyPassword(i[4], pasw):
                                         #peng-valid an login, nama untuk di cetak dan currentUser u/ return
                                         paswValid = True
                                         nama = i[0]

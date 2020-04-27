@@ -1,7 +1,7 @@
 # user_data = [["0", "0", "0", "0", "0", "0", "0"], ["1", "1", "1", "1", "1", "1", "1"]]
 
 def signup(user_data, currentUser):
-    import modules
+    import modules, B01_hash
     unameAvailable = False      # Inisiasi
     role = currentUser[5]
     new_data = [0 for i in range (7)]
@@ -18,7 +18,7 @@ def signup(user_data, currentUser):
             else:   
                     i += 1      
                     
-        new_data[4]   = input("Masukkan password pemain: ")     # Memberika input password 
+        new_data[4]   = B01_hash.hashPassword(input("Masukkan password pemain: "))     # Memberika input password 
         new_data[5]   = ("Pemain")      
         new_data[6]   = ("0")
         print("Selamat menjadi pemain,",new_data[0],". Selamat bermain.")
