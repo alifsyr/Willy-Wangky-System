@@ -1,4 +1,8 @@
 Nama,Tanggal_Lahir,Tinggi_Badan,Username,Password,Role,Saldo
+
 Babi,12/12/2001,170,babiman,XXXXXX,Admin,10000000
+
 Kucing,12/04/2020,45,kucingman,sukasarden123,Admin,0
+
 Bebek,12/04/2020,45,bebekman,kweks,Pemain,99
+
