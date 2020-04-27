@@ -1,6 +1,6 @@
 import csv
 
-def upgrade_gold(user_data):    
+def upgradegold(user_data):    
     change_acc = input("Masukkan username yang ingin di-upgrade: ")     # Memberikan input username pemain
     for i in (user_data) :      # Melakukan looping pada matrix user_data
         if i[3] == change_acc:      # jika username tersedia
@@ -9,5 +9,6 @@ def upgrade_gold(user_data):
                     int(i[6]) - 100000
                     i[5] = ("Gold")     # Role diubah menjadi Gold
                     print("Akun Anda telah diupgrade.")
+                    return user_data
                 else:
                     print("Maaf saldo anda tidak cukup.")
