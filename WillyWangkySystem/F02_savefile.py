@@ -10,6 +10,5 @@ def save(data, names):
 def writeFile(namaFile, arrayData):
     datafile = open(namaFile,mode="w",newline='')      # Membuka file dari hasil input name pada fungsi save dengan fungsi open dan menggunakan metode w untuk menulis 
     writer = csv.writer(datafile, delimiter=',')    
-
     for row in arrayData:
         writer.writerow(row)
