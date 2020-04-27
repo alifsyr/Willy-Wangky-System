@@ -17,12 +17,16 @@ def showBestWahana(pembelian_data, wahana_data):
     else:
         print()
         return
-        
+
+    # Menyimpan jumlah wahana    
     wahanaCount = 0
 
     for data in pembelian_data:
         if data != pembelian_data[0]:
+
+            # Wahana sudah diurutkan, mengecek jika data mengenai sama dengan wahana yang sedang di proses
             if data[2] == selected[2]:
+                # Menambahkan ke total penjualan tiket untuk wahana tersebut
                 currentCount += int(data[3])
                 
 
@@ -41,11 +45,16 @@ def showBestWahana(pembelian_data, wahana_data):
     newEntry = [data[2], int(currentCount)]
     pembelian_wahana = modules.addToArray(pembelian_wahana, newEntry)
 
+    # Mengurutkan data
     pembelian_wahana = modules.intSort(pembelian_wahana, 1, "descending")
 
+    # Memberi output 3 terbaik
     count = 0
     while count <=2 and count <= wahanaCount:
+        # Mencari nama wahana
         indexWahana = modules.search(pembelian_wahana[count][0], 0, wahana_data, "index")
         namaWahana = wahana_data[indexWahana][1]
+        
+        #Display output
         print(count+1 , pembelian_wahana[count][0], namaWahana, pembelian_wahana[count][1], sep=" | ")
         count += 1
