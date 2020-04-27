@@ -13,6 +13,20 @@ Alvin Rizqi Alfisyahrin
 # KAMUS GLOBAL
 '''
     user_data           : array of array of string
+    wahana_data : array of array of string
+    pembelian_data : array of array of string
+    penggunaan_data : array of array of string
+    tiket_data : array of array of string
+    refund_data : array of array of string
+    kritiksaran_data : array of array of string
+    tikethilang_data : array of array of string
+    endProgram : boolean
+    currentUser : array of string
+    i : integer
+    data : array of array
+    names : array of string
+    command : string
+
 '''
 endprogram              = False
 currentUser = [" $NOUSER", " %NOUSER", " $NOUSER", " $NOUSER", " $NOUSER", "notLoggedIn", " $NOUSER"]
