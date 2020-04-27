@@ -26,5 +26,7 @@ def refund(currentUser, tiket_data, refund_data, wahana_data):
                             else:
                                 currentUser[6] = str(int(currentUser[6]) + ((int(i[2])/20)*(jumlah_refund)))
                     return refund_data + newRefund
+                else:
+                    print('Tiket anda tidak valid dalam data kami')
         if not(found) :
             print('Tiket anda tidak valid dalam data kami')
