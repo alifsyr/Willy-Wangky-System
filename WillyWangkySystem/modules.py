@@ -10,9 +10,10 @@ dateFormat          | 133
 '''
 
 def panjang(x):
+    len = 0
     for i in x:
-        i = i
-    return(i)  
+        len  = len + 1
+    return(len)  
     
 # test = [[1,2], [2,3], [1,3], [4,2], [2,3]]
 # testText = [("ABC", 2), ("BcA", 3), ("Aad", 1)]
@@ -157,7 +158,6 @@ def search(data, query, file, option):
                 print(row)
     elif option == 'index':
         for i in range(panjang(file)):
-            print(i, data, file[i])
             if data == file[i][query]:
                 return i
 
