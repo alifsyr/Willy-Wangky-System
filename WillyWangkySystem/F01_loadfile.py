@@ -1,28 +1,31 @@
 import csv
 
 def load():
-    user_data           = loadfile(input('Masukkan nama File User: ')) # user.csv
-    wahana_data         = loadfile(input('Masukkan nama File Daftar Wahana: ')) # wahana.csv
-    pembelian_data      = loadfile(input('Masukkan nama File Pembelian Tiket: ')) # pembelian.csv
-    penggunaan_data     = loadfile(input('Masukkan nama File Penggunaan Tiket: ')) # penggunaan.csv
-    tiket_data          = loadfile(input('Masukkan nama File Kepemilikan Tiket: ')) # tiket.csv
-    refund_data         = loadfile(input('Masukkan nama File Refund Tiket: ')) # refund.csv
-    kritiksaran_data    = loadfile(input('Masukkan nama File Kritik dan Saran: ')) #kritiksaran.csv
-    tikethilang_data    = loadfile(input('Masukkan nama File Tiket Hilang: ')) #lostticket.csv
-    print("File perusahaan Willy Wangky’s Chocolate Factory telah di-load.")
+
+    folderDirectory = "data/"
+
+    user_data           = loadfile(folderDirectory + input('Masukkan nama File User: '))              # user memberikan input nama file user.csv
+    wahana_data         = loadfile(folderDirectory + input('Masukkan nama File Daftar Wahana: '))     # user memberikan input nama file wahana.csv
+    pembelian_data      = loadfile(folderDirectory + input('Masukkan nama File Pembelian Tiket: '))   # user memberikan input nama file pembelian.csv
+    penggunaan_data     = loadfile(folderDirectory + input('Masukkan nama File Penggunaan Tiket: '))  # user memberikan input nama file penggunaan.csv
+    tiket_data          = loadfile(folderDirectory + input('Masukkan nama File Kepemilikan Tiket: ')) # user memberikan input nama file tiket.csv
+    refund_data         = loadfile(folderDirectory + input('Masukkan nama File Refund Tiket: '))      # user memberikan input nama file refund.csv
+    kritiksaran_data    = loadfile(folderDirectory + input('Masukkan nama File Kritik dan Saran: '))  # user memberikan input nama file kritiksaran.csv
+    tikethilang_data    = loadfile(folderDirectory + input('Masukkan nama File Tiket Hilang: '))      # user memberikan input nama file tikethilang.csv
+    print("File perusahaan Willy Wangky’s Chocolate Factory telah di-load.")        
 
     return user_data, wahana_data, pembelian_data, penggunaan_data, tiket_data, refund_data, kritiksaran_data, tikethilang_data
 
 def autoLoad():
-    user_data           = loadfile("data/user.csv") # user.csv
-    wahana_data         = loadfile("data/wahana.csv") # wahana.csv
-    pembelian_data      = loadfile("data/pembelian.csv") # pembelian.csv
-    penggunaan_data     = loadfile("data/penggunaan.csv") # penggunaan.csv
-    tiket_data          = loadfile("data/tiket.csv") # tiket.csv
-    refund_data         = loadfile("data/refund.csv") # refund.csv
-    kritiksaran_data    = loadfile("data/kritiksaran.csv") #kritiksaran.csv
-    tikethilang_data    = loadfile("data/lostticket.csv") #lostticket.csv
-    print("File perusahaan Willy Wangky’s Chocolate Factory telah di-load secara autohmahtis bruh.")
+    user_data           = loadfile("data/user.csv")         # user memberikan input nama file user.csv
+    wahana_data         = loadfile("data/wahana.csv")       # user memberikan input nama file wahana.csv
+    pembelian_data      = loadfile("data/pembelian.csv")    # user memberikan input nama file pembelian.csv
+    penggunaan_data     = loadfile("data/penggunaan.csv")   # user memberikan input nama file penggunaan.csv
+    tiket_data          = loadfile("data/tiket.csv")        # user memberikan input nama file tiket.csv
+    refund_data         = loadfile("data/refund.csv")       # user memberikan input nama file refund.csv
+    kritiksaran_data    = loadfile("data/kritiksaran.csv")  # user memberikan input nama filekritiksaran.csv
+    tikethilang_data    = loadfile("data/tikethilang.csv")   # user memberikan input nama file tikethilang.csv
+    print("File perusahaan Willy Wangky’s Chocolate Factory telah di-load secara automatis.")
 
     return user_data, wahana_data, pembelian_data, penggunaan_data, tiket_data, refund_data, kritiksaran_data, tikethilang_data
 

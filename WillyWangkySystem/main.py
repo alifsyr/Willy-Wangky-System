@@ -1,12 +1,13 @@
 # Tugas Besar IF1210 Dasar Pemrograman
 # Kelompok X
 
-import F01_loadfile, F02_savefile, F03_signup, F04_login, F05_caripemain, F06_filterrides, F07_belitiket, F08_penggunaan, F09_refund, F10_givefeedback, F11_accessfeedback, F12_addride, F13_topup, F14_ridehistory, F15_ticketcount, F16_exit, B04_lostticket, modules
+import F01_loadfile, F02_savefile, F03_signup, F04_login, F05_caripemain, F06_filterrides, F07_belitiket, F08_penggunaan, F09_refund, F10_givefeedback, F11_accessfeedback, F12_addride, F13_topup, F14_ridehistory, F15_ticketcount, F16_exit, B04_lostticket, B02_upgradegold, modules
 '''
 Zachrandika Alif Syahrzea
 I Gede Govindabhakta
 Ryandito Diandaru
 Nabila Farras Ammara Mumtaz
+Alvin Rizqi Alfisyahrin
 '''
 
 # KAMUS GLOBAL
@@ -36,11 +37,11 @@ while (not endprogram):
         else:
             if command == "save":
                 data = [user_data, wahana_data, pembelian_data, penggunaan_data, tiket_data, refund_data, kritiksaran_data, tikethilang_data]
-                names = ["User", "Daftar Wahana", "Pembelian Tiket", "Penggunaan Tiket", "Kepemilikan Tiket", "Refund Tiket", "Kritik dan Saran"]
+                names = ["User", "Daftar Wahana", "Pembelian Tiket", "Penggunaan Tiket", "Kepemilikan Tiket", "Refund Tiket", "Kritik dan Saran", "Tiket Hilang"]
                 F02_savefile.save(data, names)
 
             elif command == "signup":
-                F03_signup.signup(user_data, currentUser)    
+                user_data = F03_signup.signup(user_data, currentUser)    
     
             elif command == "cari_pemain":
                 F05_caripemain.cari_pemain(currentUser, user_data)
@@ -80,15 +81,18 @@ while (not endprogram):
                 simmpan = F16_exit.exit()
                 if (simmpan):
                     data = [user_data, wahana_data, pembelian_data, penggunaan_data, tiket_data, refund_data, kritiksaran_data, tikethilang_data]
-                    names = ["User", "Daftar Wahana", "Pembelian Tiket", "Penggunaan Tiket", "Kepemilikan Tiket", "Refund Tiket", "Kritik dan Saran"]
+                    names = ["User", "Daftar Wahana", "Pembelian Tiket", "Penggunaan Tiket", "Kepemilikan Tiket", "Refund Tiket", "Kritik dan Saran", "Tiket Hilang"]
                     F02_savefile.save(data, names)
                 endprogram = True
     
-            elif command == "showdata":
+            elif command == "showdata" and currentUser[5] == "Admin" :
                 data = [user_data, wahana_data, pembelian_data, penggunaan_data, tiket_data, refund_data, kritiksaran_data, tikethilang_data]
                 for i in data:
                     print(i, end=" | ")
                     print("\n")
+            
+            elif command == "upgrade_gold":
+                user_data = B02_upgradegold.upgradegold(user_data, currentUser)
 
             else:
                 print("Command tidak dikenali, gunakan \"help\" untuk bantuan")

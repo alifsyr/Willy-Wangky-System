@@ -9,6 +9,7 @@ def filterRides(wahana_data):
     print("2. Tanpa batasan")
     print()
     BatasUmur = int(input("Batasan umur pemain: "))
+    #mengecek apakah input user valid
     while (BatasUmur<1 or BatasUmur>4):
         print("Batasan umur tidak valid!")
         BatasUmur = int(input("Batasan umur pemain: "))
@@ -27,11 +28,11 @@ def filterRides(wahana_data):
     else:
         BT = "Tanpa batasan"
     print()
-    countride = 0
+    countride = 0 #untuk mengecek ketersediaan wahana
     print("Hasil pencarian")
     for i in (wahana_data):
-        if (BU == i[3] and BT == i[4]):
+        if (BU == i[3] and BT == i[4]): #memfilter wahana sesuai kriteria yang dimasukkan oleh user
             print(str(i[0] + " | " + i[1] + " | " + i[2]))
             countride = countride + 1
     if (countride == 0):
-        print("Tidak ada wahana yang sesuai dengan pencarian kamu.")
+        print("Tidak ada wahana yang sesuai dengan pencarian kamu.") #wahana tidak tersedia
