@@ -182,3 +182,15 @@ def updateArray(file, new_value, searchQuery, queryIndex):
         if i[queryIndex] == searchQuery:
             i = new_value
             return file
+
+def addToArray(array, entry):
+    length = panjang(array)
+
+    newArray = [0 for i in range(length+1)]
+    for i in range(length+1):
+        if i != length: 
+            newArray[i] = array[i]
+        else:
+            newArray[i] = entry
+    
+    return newArray

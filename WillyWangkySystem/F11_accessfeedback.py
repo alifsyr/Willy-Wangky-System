@@ -12,8 +12,9 @@ def accessFeedback(feedback):
 
     print("Kritik dan saran: ")
     for entry in feedback:
-        id_wahana   = entry[2]
-        tanggal     = entry[1]
-        user        = entry[0]
-        kritik      = entry[3]
-        print(id_wahana, tanggal, user, kritik, sep=" | ")
+        if entry != feedback[0]:
+            id_wahana   = entry[2]
+            tanggal     = entry[1]
+            user        = entry[0]
+            kritik      = entry[3]
+            print(id_wahana, tanggal, user, kritik, sep=" | ")

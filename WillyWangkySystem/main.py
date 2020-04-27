@@ -75,7 +75,7 @@ while (not endprogram):
                 F14_ridehistory.rideHistory(penggunaan_data, currentUser)
     
             elif command == "tiket_pemain":
-                F15_ticketcount.showTicket(tiket_data, currentUser)
+                F15_ticketcount.showTicket(tiket_data, currentUser, wahana_data)
 
             elif command == "exit":
                 simmpan = F16_exit.exit()
