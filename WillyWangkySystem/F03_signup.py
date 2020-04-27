@@ -12,8 +12,7 @@ def signup(user_data, currentUser):
         new_data[2]   = input("Masukkan tinggi badan pemain (cm):  ")    # Memberikan input tinggi pemain dalam cm 
         new_data[3]   = input("Masukkan username pemain: ")     # Memberikan input username pemain 
         while  i < (modules.panjang(user_data)) and not(unameAvailable):       # Program terus mengulang pada saat panjang array user_data kurang dari i dan unameAvailable False 
-            if user_data[i][3] == new_data[3]:      # Jika username sudah digunakan
-                unameAvailable = True       
+            if user_data[i][3] == new_data[3]:      # Jika username sudah digunakan    
                 print("Username sudah digunakan, silahkan masukan username lain.")
                 new_data[3]   = input("Masukkan username pemain: ")
             else:   
